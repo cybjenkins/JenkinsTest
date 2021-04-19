@@ -10,6 +10,10 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+- task: lighthouse-ci@1
+  inputs:
+    command: 'healthcheck'
+    parameters: 'https://www.cybage.com/'
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
